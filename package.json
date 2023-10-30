@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evsart87/Calculator.git"
+  },
+  "author": "Evsart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evsart87/Calculator/issues"
+  },
+  "homepage": "https://github.com/Evsart87/Calculator#readme"
+}
