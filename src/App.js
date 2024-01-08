@@ -6,7 +6,7 @@ function App() {
     <div onClick={() => {
       document.body.classList.toggle('dark-theme');
     }}>
-      switch
+      свитч тут был, а это фолс ветка
     </div>
     </div>
   );
