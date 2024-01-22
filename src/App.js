@@ -1,13 +1,13 @@
 import './App.css';
+import design from './images/design.jpg'
 
 function App() {
   return (
-    <div>
-    <div onClick={() => {
-      document.body.classList.toggle('dark-theme');
-    }}>
-      я все нахрен сломаю
-    </div>
+    <div className='content_center'>
+      {/* <img src={design}></img> */}
+      <div className='calc_container'>
+        
+      </div>
     </div>
   );
 }
