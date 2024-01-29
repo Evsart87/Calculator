@@ -36,7 +36,7 @@ body.dark-theme {
 .calc_container {
   display: flex;
   flex-direction: column;
-  width: 276px;
+  width: 280px;
   height: 490px;
   background-color: var(--calc-container-color);
   border-radius: 20px;
@@ -49,23 +49,38 @@ body.dark-theme {
   width: 100%;
   border-radius: 20px 20px 0 0;
   background-color: green;
+  box-sizing: border-box;
+  padding: 24px 24px 0px 24px;
+  
+  .divider {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
 }
 
 .bottom_part {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   border-radius: 0 0 20px 20px;
   background-color: red;
+  box-sizing: border-box;
+  padding: 24px;
+
+  .line {
+    display: flex;
+  
+    .math_button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-left: 24px;
+      background: var(--math-button-background);
+    }
+    .math_button:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
-.line {
-  display: flex;
-}
-
-.math_button {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--math-button-background);
-}

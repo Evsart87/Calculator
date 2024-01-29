@@ -9,7 +9,9 @@ function App() {
     <div className='content_center'>
       <img src={design}></img>
       <div className='calc_container'>
-        <div className='upper_part'>kek</div>
+        <div className='upper_part'>
+          <div class="divider"></div>
+        </div>
         <div className='bottom_part'>
           <div className='line'>
             <div className='math_button' onClick={()=>handleClick('reset')}>AC</div>
