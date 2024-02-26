@@ -1,21 +1,33 @@
+import { useState } from 'react';
 import './App.scss';
-import design from './images/design.jpg'
+import daynight from './images/dark-theme.svg'
 
 function App() {
+  const [value, setValue] = useState([]);
+  const [current, setCurrent] = useState('0');
   const handleClick = (arg) => {
-    console.log(arg);
+    setValue([...value, arg])
   }
   return (
     <div className='content_center'>
-      <img src={design}></img>
       <div className='calc_container'>
+        {/* верхняя часть */}
         <div className='upper_part'>
-          <div class="divider"></div>
+          <img src={daynight} className='toogleTheme' onClick={() => {
+            document.body.classList.toggle('dark-theme');
+          }}></img>
+          <div className='allExample'>{value}</div>
+          <div className='result' value={current}>{current}</div>
+          <div className="divider"></div>
         </div>
+        {/* нижняя часть */}
         <div className='bottom_part'>
           <div className='line'>
-            <div className='math_button' onClick={()=>handleClick('reset')}>AC</div>
-            <div className='math_button' onClick={()=>handleClick('plus_minus')}>+/-</div>
+            <div className='math_button double' onClick={()=>{
+              setValue([]);
+              setCurrent(0)
+            }}>AC</div>
+            <div className='math_button double' onClick={()=>handleClick('plus_minus')}>+/-</div>
             <div className='math_button' onClick={()=>handleClick('%')}>%</div>
             <div className='math_button' onClick={()=>handleClick('/')}>/</div>
           </div>
@@ -40,7 +52,7 @@ function App() {
           <div className='line'>
             <div className='math_button without_back' onClick={()=>handleClick('0')}>0</div>
             <div className='math_button without_back' onClick={()=>handleClick(',')}>,</div>
-            <div className='math_button without_back' onClick={()=>handleClick('=')}>=</div>
+            <div className='equal_button' onClick={()=> setCurrent(eval(value.join('')))}>=</div>
           </div>
         </div>
       </div>
